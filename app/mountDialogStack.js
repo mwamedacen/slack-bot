@@ -1,23 +1,34 @@
 import { Prompts } from 'botbuilder';
+import { getProperties } from './properties';
+import { NEW_POST } from './dialogFlows/newPostFlows';
+import { MY_POSTS } from './dialogFlows/myPostsFlows';
+import { BROWSE_POST } from './dialogFlows/browsePostFlows';
+import mountDialogs from './dialogFlows';
 
 export default function(bot) {
+  const properties = getProperties();
+
+  mountDialogs(bot);
+
+  const mainChoices = {
+    [properties.BTN_NEW_POST]: {
+      dialog: NEW_POST,
+    },
+    [properties.BTN_BROWSE_POST]: {
+      dialog: BROWSE_POST,
+    },
+    [properties.BTN_MY_POSTS]: {
+      dialog: MY_POSTS,
+    },
+  };
+
   bot.dialog('/', [
     session => {
-      Prompts.text(session, "Hello... What's your name??");
+      //const teamId = session.message.sourceEvent && session.message.sourceEvent.team && session.message.sourceEvent.team.id;
+      Prompts.choice(session, properties.MSG_WELCOME, mainChoices);
     },
     (session, results) => {
-      session.userData.name = results.response;
-      Prompts.number(session, "Hi " + results.response + ", How many years have you been coding?");
+      session.beginDialog(mainChoices[results.response.entity].dialog);
     },
-    (session, results) => {
-      session.userData.coding = results.response;
-      Prompts.choice(session, "What language do you code Node using?", ["JavaScript", "CoffeeScript", "TypeScript"]);
-    },
-    (session, results) => {
-      session.userData.language = results.response.entity;
-      session.send("Got it... " + session.userData.name +
-        " you've been programming for " + session.userData.coding +
-        " years and use " + session.userData.language + ".");
-    }
   ]);
 }
