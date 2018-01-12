@@ -21,5 +21,5 @@ MSG_SOLUTION = So you think you have the solution
 TITLE_RECAP_OBSERVATION = Here is what you observed so far buddy
 TITLE_RECAP_CAUSE = And you think the cause is
 TITLE_RECAP_SOLUTION = And your solution is
-MSG_PUBLISH = Thank for publishing this ;)
+MSG_PUBLISH = Thank you for publishing this ;)
 MSG_CANCEL = No problem, please feel free to come back.
