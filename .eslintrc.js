@@ -15,11 +15,10 @@ module.exports = {
 
     globals: {
         __DEV__: true,
-        Groot: true,
     },
 
     env: {
-        browser: true,
+        browser: false,
     },
 
     rules: {
@@ -69,7 +68,7 @@ module.exports = {
         // https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers
         'import/resolver': {
             node: {
-                moduleDirectory: ['node_modules', 'src'],
+                moduleDirectory: ['node_modules', 'app'],
             },
         },
     },
