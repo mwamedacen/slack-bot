@@ -1,1 +1,1 @@
-nodeProcessCommandLine: "D:\home\site\wwwroot\node_modules\.bin\babel-node"
+nodeProcessCommandLine: "npm start"
