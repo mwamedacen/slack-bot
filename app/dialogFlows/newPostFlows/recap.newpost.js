@@ -26,7 +26,11 @@ export default function(bot) {
 
   bot.dialog(RECAP, [
     session => {
-      const { newObservation, cause, solution } = session.privateConversationData;
+      const {
+        newObservation,
+        cause,
+        solution,
+      } = session.privateConversationData;
 
       let message;
       let choices;
@@ -35,44 +39,44 @@ export default function(bot) {
         message = `
         ${properties.TITLE_RECAP_OBSERVATION}
         
-        ${newObservation}
+        \t${newObservation}
         `;
         choices = _.clone(allChoices);
       } else if (newObservation && cause && !solution) {
         message = `
         ${properties.TITLE_RECAP_OBSERVATION}
         
-        ${newObservation}
+        \t${newObservation}
         
         ${properties.TITLE_RECAP_CAUSE}
         
-        ${cause}
+        \t${cause}
         `;
         choices = _.omit(allChoices, [properties.BTN_CAUSE]);
       } else if (newObservation && !cause && solution) {
         message = `
         ${properties.TITLE_RECAP_OBSERVATION}
         
-        ${newObservation}
+        \t${newObservation}
         
         ${properties.TITLE_RECAP_SOLUTION}
         
-        ${solution}
+        \t${solution}
         `;
         choices = _.omit(allChoices, [properties.BTN_SOLUTION]);
       } else if (newObservation && cause && solution) {
         message = `
         ${properties.TITLE_RECAP_OBSERVATION}
         
-        ${newObservation}
+        \t${newObservation}
         
         ${properties.TITLE_RECAP_CAUSE}
         
-        ${cause}
+        \t${cause}
         
         ${properties.TITLE_RECAP_SOLUTION}
         
-        ${solution}
+        \t${solution}
         `;
         choices = _.omit(allChoices, [properties.BTN_CAUSE, properties.BTN_SOLUTION]);
       }
