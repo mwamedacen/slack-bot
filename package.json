@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/babel-node app"
+    "postinstall": "gulp",
+    "start": "node dist/app"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +33,7 @@
     "babel-loader": "8.0.0-beta.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.7.0",
@@ -41,6 +43,8 @@
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.3.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "prettier": "^1.8.2",
     "request": "^2.81.0",
     "stylelint": "^8.2.0",
