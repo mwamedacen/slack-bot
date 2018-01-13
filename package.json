@@ -9,8 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp",
-    "start": "node dist/app"
+    "start": "gulp && node dist/app"
   },
   "author": "",
   "license": "ISC",
