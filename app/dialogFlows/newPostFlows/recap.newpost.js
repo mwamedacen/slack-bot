@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { Prompts } from 'botbuilder';
+import { Prompts, ListStyle } from 'botbuilder';
 import { getProperties } from '../../properties';
 import { PUBLISH } from './publish.newpost';
 import { CANCEL } from './cancel.newpost';
@@ -73,7 +73,7 @@ export default function(bot) {
         choices = _.omit(allChoices, [properties.BTN_CAUSE, properties.BTN_SOLUTION]);
       }
 
-      Prompts.choice(session, message, choices);
+      Prompts.choice(session, message, choices, { listStyle: ListStyle.button });
     },
     (session, results) => {
       session.beginDialog(allChoices[results.response.entity].dialog);

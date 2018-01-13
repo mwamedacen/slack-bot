@@ -1,4 +1,4 @@
-import { Prompts } from 'botbuilder';
+import { Prompts, ListStyle } from 'botbuilder';
 import { getProperties } from './properties';
 import { NEW_POST } from './dialogFlows/newPostFlows';
 import { MY_POSTS } from './dialogFlows/myPostsFlows';
@@ -25,7 +25,7 @@ export default function(bot) {
   bot.dialog('/', [
     session => {
       //const teamId = session.message.sourceEvent && session.message.sourceEvent.team && session.message.sourceEvent.team.id;
-      Prompts.choice(session, properties.MSG_WELCOME, mainChoices);
+      Prompts.choice(session, properties.MSG_WELCOME, mainChoices, { listStyle: ListStyle.button });
     },
     (session, results) => {
       session.beginDialog(mainChoices[results.response.entity].dialog);
