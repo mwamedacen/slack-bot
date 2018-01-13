@@ -36,48 +36,40 @@ export default function(bot) {
       let choices;
 
       if (newObservation && !cause && !solution) {
-        message = `
-        ${properties.TITLE_RECAP_OBSERVATION}
+        message = `${properties.TITLE_RECAP_OBSERVATION}
         
-        \t${newObservation}
-        `;
+        ${newObservation}`;
         choices = _.clone(allChoices);
       } else if (newObservation && cause && !solution) {
-        message = `
-        ${properties.TITLE_RECAP_OBSERVATION}
+        message = `${properties.TITLE_RECAP_OBSERVATION}
         
-        \t${newObservation}
+        ${newObservation}
         
         ${properties.TITLE_RECAP_CAUSE}
         
-        \t${cause}
-        `;
+        ${cause}`;
         choices = _.omit(allChoices, [properties.BTN_CAUSE]);
       } else if (newObservation && !cause && solution) {
-        message = `
-        ${properties.TITLE_RECAP_OBSERVATION}
+        message = `${properties.TITLE_RECAP_OBSERVATION}
         
-        \t${newObservation}
+        ${newObservation}
         
         ${properties.TITLE_RECAP_SOLUTION}
         
-        \t${solution}
-        `;
+        ${solution}`;
         choices = _.omit(allChoices, [properties.BTN_SOLUTION]);
       } else if (newObservation && cause && solution) {
-        message = `
-        ${properties.TITLE_RECAP_OBSERVATION}
+        message = `${properties.TITLE_RECAP_OBSERVATION}
         
-        \t${newObservation}
+        ${newObservation}
         
         ${properties.TITLE_RECAP_CAUSE}
         
-        \t${cause}
+        ${cause}
         
         ${properties.TITLE_RECAP_SOLUTION}
         
-        \t${solution}
-        `;
+        ${solution}`;
         choices = _.omit(allChoices, [properties.BTN_CAUSE, properties.BTN_SOLUTION]);
       }
 
