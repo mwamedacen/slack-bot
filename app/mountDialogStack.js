@@ -24,9 +24,9 @@ export default function(bot) {
 
   bot.dialog('/', [
     session => {
-      const teamId = session.message.sourceEvent && session.message.sourceEvent.team && session.message.sourceEvent.team.id;
-      console.log('>>>>>>teamId', teamId);
-      console.log('>>>>>>session', JSON.stringify(session));
+      const message = session.message;
+      console.log('>>>>>>teamId', message);
+      console.log('>>>>>>session', session);
       Prompts.choice(session, properties.MSG_WELCOME, mainChoices, { listStyle: ListStyle.button });
     },
     (session, results) => {
