@@ -25,8 +25,7 @@ export default function(bot) {
   bot.dialog('/', [
     session => {
       const message = session.message;
-      console.log('>>>>>>teamId', message);
-      console.log('>>>>>>session', session);
+      console.log('>>>>>>message', message);
       Prompts.choice(session, properties.MSG_WELCOME, mainChoices, { listStyle: ListStyle.button });
     },
     (session, results) => {

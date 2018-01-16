@@ -16,15 +16,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/polyfill": "7.0.0-beta.32",
-    "botbuilder": "^3.13.1",
-    "botbuilder-azure": "^3.0.4",
-    "dotenv": "^4.0.0",
-    "lodash": "^4.17.4",
-    "properties": "^1.2.1",
-    "restify": "^5.0.0",
     "@babel/core": "7.0.0-beta.32",
     "@babel/node": "7.0.0-beta.32",
+    "@babel/polyfill": "7.0.0-beta.32",
     "@babel/preset-env": "7.0.0-beta.32",
     "@babel/preset-flow": "7.0.0-beta.32",
     "@babel/preset-stage-2": "7.0.0-beta.32",
@@ -33,8 +27,15 @@
     "babel-jest": "^21.2.0",
     "babel-loader": "8.0.0-beta.0",
     "babel-preset-env": "^1.6.1",
+    "botbuilder": "^3.13.1",
+    "botbuilder-azure": "^3.0.4",
+    "botbuilder-teams": "^0.1.7",
+    "dotenv": "^4.0.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0"
+    "gulp-babel": "^7.0.0",
+    "lodash": "^4.17.4",
+    "properties": "^1.2.1",
+    "restify": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^4.11.0",

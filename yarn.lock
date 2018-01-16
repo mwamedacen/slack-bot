@@ -1402,7 +1402,15 @@ botbuilder-azure@^3.0.4:
     promise "^7.1.1"
     tedious "^2.0.0"
 
-botbuilder@^3.11.0, botbuilder@^3.13.1:
+botbuilder-teams@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/botbuilder-teams/-/botbuilder-teams-0.1.7.tgz#369cd8d5a4f364034146cf6c0582fe9e8891f437"
+  dependencies:
+    botbuilder "^3.9.0"
+    ms-rest "^1.15.7"
+    sprintf-js "^1.1.1"
+
+botbuilder@^3.11.0, botbuilder@^3.13.1, botbuilder@^3.9.0:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/botbuilder/-/botbuilder-3.13.1.tgz#2b91c524486a1011fc88a4d0585d3039031868f1"
   dependencies:
@@ -1954,6 +1962,10 @@ duplexer2@0.0.2:
   resolved "https://registry.yarnpkg.com/duplexer2/-/duplexer2-0.0.2.tgz#c614dcf67e2fb14995a91711e5a617e8a60a31db"
   dependencies:
     readable-stream "~1.1.9"
+
+duplexer@~0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
 ecc-jsbn@~0.1.1:
   version "0.1.1"
@@ -3800,9 +3812,20 @@ mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@2.x.x, moment@^2.10.3, moment@^2.10.6:
+moment@2.x.x, moment@^2.10.3, moment@^2.10.6, moment@^2.14.1:
   version "2.20.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
+
+ms-rest@^1.15.7:
+  version "1.15.7"
+  resolved "https://registry.yarnpkg.com/ms-rest/-/ms-rest-1.15.7.tgz#400515e05b1924889cb61a1ec6054290a68e1207"
+  dependencies:
+    duplexer "~0.1.1"
+    moment "^2.14.1"
+    request "~2.74.0"
+    through "~2.3.4"
+    tunnel "~0.0.2"
+    uuid "^3.0.1"
 
 ms@2.0.0:
   version "2.0.0"
@@ -4973,7 +4996,7 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
-sprintf-js@^1.0.3:
+sprintf-js@^1.0.3, sprintf-js@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.1.1.tgz#36be78320afe5801f6cea3ee78b6e5aab940ea0c"
 
@@ -5242,7 +5265,7 @@ through2@^2.0.0:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
 
-through@^2.3.6:
+through@^2.3.6, through@~2.3.4:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
@@ -5333,7 +5356,7 @@ tunnel-agent@~0.4.1:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.4.3.tgz#6373db76909fe570e08d73583365ed828a74eeeb"
 
-tunnel@0.0.5:
+tunnel@0.0.5, tunnel@~0.0.2:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.5.tgz#d1532254749ed36620fcd1010865495a1fa9d0ae"
 
@@ -5481,7 +5504,7 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-uuid@^3.0.0, uuid@^3.1.0:
+uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
