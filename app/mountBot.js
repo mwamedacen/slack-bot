@@ -1,5 +1,4 @@
-import { UniversalBot } from 'botbuilder';
-import { ChatConnector } from 'botbuilder-teams';
+import { UniversalBot, ChatConnector } from 'botbuilder';
 import config from './configuration';
 import setupStorage from './setupStorage';
 import mountDialogStack from './mountDialogStack';
