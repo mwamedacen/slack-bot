@@ -1,12 +1,12 @@
 import { UniversalBot } from 'botbuilder';
-import { TeamsChatConnector } from 'botbuilder-teams';
+import { ChatConnector } from 'botbuilder-teams';
 import config from './configuration';
 import setupStorage from './setupStorage';
 import mountDialogStack from './mountDialogStack';
 
 export default function (server) {
 // Create chat connector for communicating with the Bot Framework Service
-  const connector = new TeamsChatConnector({
+  const connector = new ChatConnector({
     appId: config.MicrosoftAppId,
     appPassword: config.MicrosoftAppPassword,
     openIdMetadata: config.BotOpenIdMetadata,
