@@ -1,6 +1,6 @@
 import { UniversalBot, ChatConnector } from 'botbuilder';
 import config from './configuration';
-import setupStorage from './setupStorage';
+import setupBotStorage from './setupBotStorage';
 import mountDialogStack from './mountDialogStack';
 
 export default function (server) {
@@ -23,6 +23,6 @@ export default function (server) {
 // Create your bot with a function to receive messages from the user
   const bot = new UniversalBot(connector);
 
-  setupStorage(bot);
+  setupBotStorage(bot);
   mountDialogStack(bot);
 }
