@@ -1,0 +1,37 @@
+{
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.0",
+  "version": "1.0.0",
+  "id": "638cd1cd-131b-423f-a38f-172d985d372f",
+  "packageName": "com.ishhara.botishh",
+  "developer": {
+    "name": "Ishhara",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "Botishh",
+    "full": "Hello World App for Microsoft Teams"
+  },
+  "description": {
+    "short": "Hello World App for Microsoft Teams",
+    "full": "This sample app provides a very simple app for Microsoft Teams. You can extend this to add more content and capabilities."
+  },
+  "icons": {
+    "outline": "contoso20x20.png",
+    "color": "contoso96x96.png"
+  },
+  "accentColor": "#60A18E",
+  "bots": [{
+    "botId": "638cd1cd-131b-423f-a38f-172d985d372f",
+    "needsChannelSelector": false,
+    "isNotificationOnly": false,
+    "scopes": [
+      "team",
+      "personal"
+    ]
+  }],
+  "permissions": [],
+  "validDomains": []
+}
