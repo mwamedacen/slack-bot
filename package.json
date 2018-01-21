@@ -36,9 +36,14 @@
     "lodash": "^4.17.4",
     "mongoose": "^5.0.0",
     "properties": "^1.2.1",
-    "restify": "^5.0.0"
+    "restify": "^5.0.0",
+    "del": "^3.0.0",
+    "gulp-zip": "^4.1.0",
+    "zip-folder": "^1.0.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "del": "^3.0.0",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
