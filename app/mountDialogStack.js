@@ -24,7 +24,9 @@ export default function(bot) {
 
   bot.dialog('/', [
     session => {
-      Prompts.choice(session, properties.MSG_WELCOME, mainChoices, { listStyle: ListStyle.button });
+      Prompts.choice(session, properties.MSG_WELCOME, mainChoices, {
+        listStyle: ListStyle.button,
+      });
     },
     (session, results) => {
       session.beginDialog(mainChoices[results.response.entity].dialog);

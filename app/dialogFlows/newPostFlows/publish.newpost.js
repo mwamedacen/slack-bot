@@ -26,7 +26,10 @@ export default function(bot) {
           },
         },
         err => {
-          if (err) return session.endConversation('An error occured, your contribution hasn\'t been submitted sorry');
+          if (err) {
+            console.error(err);
+            return session.endConversation(properties.ERROR_CREATE_ERROR);
+          }
 
           return session.endConversation(properties.MSG_PUBLISH);
         },

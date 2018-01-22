@@ -8,9 +8,7 @@ export default function(bot) {
   const properties = getProperties();
 
   bot.dialog(NEW_OBSERVATION, [
-    session => {
-      Prompts.text(session, properties.MSG_NEW_OBSERVATION_1 + '\n' + properties.MSG_NEW_OBSERVATION_2)
-    },
+    session => Prompts.text(session, properties.MSG_NEW_OBSERVATION),
     (session, results) => {
       session.privateConversationData.newObservation = results.response;
 
