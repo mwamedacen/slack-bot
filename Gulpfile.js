@@ -4,11 +4,7 @@ const babel = require('gulp-babel');
 const zip = require('gulp-zip');
 const del = require('del');
 
-gulp.task('clean', () => {
-  return del([
-    'manifest/**/*'
-  ])
-});
+gulp.task('clean-manifest', () =>  del([ 'manifest/**/*' ]));
 
 gulp.task('generate-manifest', () => {
   gulp.src(['platforms/MicrosoftTeams/images/contoso*', 'platforms/MicrosoftTeams/manifest.json'])
@@ -16,7 +12,9 @@ gulp.task('generate-manifest', () => {
   .pipe(gulp.dest('manifest'));
 });
 
-gulp.task('default', () => {
+gulp.task('clean-dist', () => del(['dist']));
+
+gulp.task('default',['clean-dist'], () => {
   gulp.src('app/properties/message')
   .pipe(gulp.dest('dist/app/properties'));
 
