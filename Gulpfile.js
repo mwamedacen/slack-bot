@@ -4,11 +4,11 @@ const babel = require('gulp-babel');
 const zip = require('gulp-zip');
 const del = require('del');
 
-gulp.task('clean-manifest', () =>  del([ 'manifest/**/*' ]));
+gulp.task('clean-manifest', () => del(['manifest/**/*']));
 
-gulp.task('generate-manifest', () => {
+gulp.task('generate-manifest', ['clean-manifest'], () => {
   gulp.src(['platforms/MicrosoftTeams/images/contoso*', 'platforms/MicrosoftTeams/manifest.json'])
-  .pipe(zip('helloworldapp.zip'))
+  .pipe(zip('microsoftteamsbotapp.zip'))
   .pipe(gulp.dest('manifest'));
 });
 
