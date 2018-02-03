@@ -5,10 +5,10 @@ import { getProperties } from '../../properties';
 export const BROWSE_POST = 'BROWSE_POST';
 
 export default function(bot) {
+  const properties = getProperties();
   bot.dialog(BROWSE_POST, [
     session =>
       UserContribution.find({}, (err, ucs) => {
-        const properties = getProperties();
         if (err) return session.endConversation(properties.GENERIC_ERROR);
         if (!ucs.length) return session.endConversation(properties.EMPTY_POSTS);
 
