@@ -21,7 +21,7 @@ export default function(bot) {
           return `* ${user.name} posted : ${observation}${cause}${solution}`;
         }).join('\n');
 
-        return session.endConversation(`Here are all the contributions \n ${listOfContributions}`);
+        return session.endConversation(`Here are all the posts of your team \n ${listOfContributions}`);
       }),
   ]);
 }

@@ -6,7 +6,7 @@ BTN_CAUSE = Develop on cause
 BTN_SOLUTION = Proposition a solution
 BTN_CANCEL = Cancel
 BTN_PUBLISH = Publish
-BTN_EDIT = Edit your contribution
+BTN_EDIT = Edit your post
 BTN_EDIT_OBSERVATION = Edit your observation
 BTN_EDIT_CAUSE = Edit your cause
 BTN_EDIT_SOLUTION = Edit your solution
@@ -22,6 +22,6 @@ MSG_PUBLISH = Thank you for publishing this ;)
 MSG_CANCEL = No problem, please feel free to come back.
 
 EMPTY_POSTS = There's no posts for your team yet
-ERROR_CREATE_ERROR = Sorry byt your contribution hasn't been submitted, please retry
+ERROR_CREATE_ERROR = Sorry but your post hasn't been submitted, please retry
 
 GENERIC_ERROR = Sorry but an error occured
