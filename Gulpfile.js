@@ -27,5 +27,6 @@ gulp.task('default',['clean-dist'], () => {
   .pipe(gulp.dest('dist/app'));
 
 
-  gulp.src('node_modules/**/*.js').pipe(gulp.dest('dist/node_modules'));
+  gulp.src('node_modules/**/*')
+  .pipe(gulp.dest('dist/node_modules'));
 });
