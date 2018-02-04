@@ -32,46 +32,30 @@ export default function(bot) {
         solution,
       } = session.privateConversationData;
 
-      let message;
       let choices;
 
       if (newObservation && !cause && !solution) {
-        message = `${properties.TITLE_RECAP_OBSERVATION}
-        
-        ${newObservation}`;
         choices = _.clone(allChoices);
       } else if (newObservation && cause && !solution) {
-        message = `${properties.TITLE_RECAP_OBSERVATION}
-        
-        ${newObservation}
-        
-        ${properties.TITLE_RECAP_CAUSE}
-        
-        ${cause}`;
         choices = _.omit(allChoices, [properties.BTN_CAUSE]);
       } else if (newObservation && !cause && solution) {
-        message = `${properties.TITLE_RECAP_OBSERVATION}
-        
-        ${newObservation}
-        
-        ${properties.TITLE_RECAP_SOLUTION}
-        
-        ${solution}`;
         choices = _.omit(allChoices, [properties.BTN_SOLUTION]);
       } else if (newObservation && cause && solution) {
-        message = `${properties.TITLE_RECAP_OBSERVATION}
-        
-        ${newObservation}
-        
-        ${properties.TITLE_RECAP_CAUSE}
-        
-        ${cause}
-        
-        ${properties.TITLE_RECAP_SOLUTION}
-        
-        ${solution}`;
         choices = _.omit(allChoices, [properties.BTN_CAUSE, properties.BTN_SOLUTION]);
       }
+
+      const message = _.trim(`**${properties.TITLE_RECAP_OBSERVATION}**
+        
+        >${'> '+newObservation}
+        
+        ${cause && '**' + properties.TITLE_RECAP_CAUSE + '**' || ''}
+        
+        ${cause ? '> '+ cause : ''}
+        
+        ${solution && '**'+properties.TITLE_RECAP_SOLUTION+'**' || ''}
+        
+        ${solution ? '> '+solution : ''}
+      `).replace(/\s\s+/, '');
 
       Prompts.choice(session, message, choices, { listStyle: ListStyle.button });
     },
