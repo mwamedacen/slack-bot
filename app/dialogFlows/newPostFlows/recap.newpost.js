@@ -52,7 +52,7 @@ export default function(bot) {
         
         ${cause ? '> '+ cause : ''}
         
-        ${solution && '**'+properties.TITLE_RECAP_SOLUTION+'**' || ''}
+        ${solution && '**' + properties.TITLE_RECAP_SOLUTION + '**' || ''}
         
         ${solution ? '> '+solution : ''}
       `).replace(/\s\s+/, '');
