@@ -46,7 +46,7 @@ export default function(bot) {
 
       const message = _.trim(`**${properties.TITLE_RECAP_OBSERVATION}**
         
-        >${'> '+newObservation}
+        ${'> '+newObservation}
         
         ${cause && '**' + properties.TITLE_RECAP_CAUSE + '**' || ''}
         
