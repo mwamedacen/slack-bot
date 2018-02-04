@@ -57,7 +57,7 @@ export default function(bot) {
         ${solution ? '> '+solution : ''}
       `).replace(/\s\s+/, '');
 
-      Prompts.choice(session, message, choices, { listStyle: ListStyle.button });
+      Prompts.choice(session, {type: 'message', textFormat: 'markdown', text: message}, choices, { listStyle: ListStyle.button });
     },
     (session, results) => {
       session.beginDialog(allChoices[results.response.entity].dialog);
