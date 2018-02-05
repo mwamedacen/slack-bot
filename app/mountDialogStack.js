@@ -24,6 +24,9 @@ export default function(bot) {
 
   bot.dialog('/', [
     session => {
+      console.log("++++ session", session);
+      console.log("---- Message", session.message);
+      console.log(">>>> Address", session.message.address);
       Prompts.choice(session, properties.MSG_WELCOME, mainChoices, {
         listStyle: ListStyle.button,
       });
