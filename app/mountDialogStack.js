@@ -24,7 +24,6 @@ export default function(bot) {
 
   bot.dialog('/', [
     session => {
-      console.log('____ sourceEvent', session.message.sourceEvent)
       Prompts.choice(session, properties.MSG_WELCOME, mainChoices, {
         listStyle: ListStyle.button,
       });
