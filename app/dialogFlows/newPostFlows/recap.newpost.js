@@ -106,13 +106,13 @@ function formatPayloadForSlack({session, newObservation, cause, solution}) {
         "color": "#3AA3E3",
         "attachment_type": "default",
         "actions": _.compact([
-          cause && {
+          !cause && {
             "name": properties.BTN_CAUSE,
             "text": properties.BTN_CAUSE,
             "type": "button",
             "value": CAUSE
           },
-          solution && {
+          !solution && {
             "name": properties.BTN_SOLUTION,
             "text": properties.BTN_SOLUTION,
             "type": "button",
@@ -126,8 +126,8 @@ function formatPayloadForSlack({session, newObservation, cause, solution}) {
             "value": CANCEL
           },
           {
-            "name": properties.PUBLISH,
-            "text": properties.PUBLISH,
+            "name": properties.BTN_PUBLISH,
+            "text": properties.BTN_PUBLISH,
             "style": "primary",
             "type": "button",
             "value": PUBLISH
